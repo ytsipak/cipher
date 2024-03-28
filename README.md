@@ -1,4 +1,4 @@
-## Banking website "Unity Trust"
+## Crypto Investing Platform "Cipher"
 
 ### Project Description
 
