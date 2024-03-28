@@ -8,6 +8,16 @@ Discover Cipher — Best crypto investing platform!
 
 👉 Live Demo: <a href='https://crypto-cipher.vercel.app/'>Live Demo</a>
 
+<h3>🛠️ Functionality</h3>
+- 📱 Responsive design for all devices
+- 🌟 All icons are added to an SVG sprite
+- 💻 Clean & optimized code
+- 🔧 Reusable components
+- 🎨 Stylish hover animations
+- 🌈 Modern gradients & borders
+- 📊 Efficient data mapping
+- 📂 Organized folder structure
+
 ### Built With
 [![Technologies](https://skillicons.dev/icons?i=react,js,tailwind,vite,photoshop)](https://skillicons.dev)
 <br>
