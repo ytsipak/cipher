@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Krona One";
+  src: url("../fonts/KronaOne-Regular.ttf");
+}
+
+:root {
+  --lime-gradient: linear-gradient(
+    144.39deg,
+    #86a724 -80%,
+    #a1cf14 -15%,
+    #ffffff 95%
+  );
+  --img-shadow: 0px 0px 10px rgba(66, 71, 91, 0.8);
+  --border-width: 0.1rem;
+  --border-radius: 20px;
+  --size: 250px;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: white;
+}
+
+/* Custom Scrollbar */
+
+/* total width */
+body::-webkit-scrollbar {
+  background-color: #fff;
+  width: 16px;
+}
+
+/* background of the scrollbar except button or resizer */
+body::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/* scrollbar itself */
+body::-webkit-scrollbar-thumb {
+  background-color: #babac0;
+  border-radius: 16px;
+  border: 4px solid #fff;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a5;
+}
+
+/* set button(top and bottom of the scrollbar) */
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Navbar Burger Background */
+.bg-black-gradient {
+  background: linear-gradient(
+    144.39deg,
+    #efefef -278.56%,
+    #6d6d6d -78.47%,
+    #171717 91.61%
+  );
+}
+
+/* ----------------------------- */
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/* ----------------------------- */
+
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+/* List styling in "Services" section */
+@media only screen and (min-width: 1060px) {
+  .services-card:first-child {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  .services-card:last-child {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+
+  .services-card:nth-child(2) {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .services-card:nth-child(2) .card__container h4,
+  .services-card:nth-child(2) .card__container p {
+    color: #070c0e;
+  }
+}
+
+/* "FeedbackCard" Section */
+.feedback-card:hover .card__container-circle {
+  background-color: transparent;
+  border-width: 10px;
+  border-color: #070c0e;
+}
+
+.feedback-card:hover .card__container-circleBorder {
+  border-color: transparent;
+  inset: 0.5rem;
+  background-color: #070c0e;
+}
+
+.feedback-card:hover .card__container Button {
+  display: block;
+}
+
+.feedback-card:hover h4,
+.feedback-card:hover p {
+  color: #070c0e;
+}
+
+.feedback-card.modern-border:hover::before,
+.feedback-card.modern-border:hover::after {
+  visibility: hidden;
+}
+
+.footer-copyright {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Poppins;
+}
+
+/* -------------------------- */
+/* GRADIENTS */
+
+/* Modern Border for "Services" and "Crypto Portfolio" sections */
+.modern-border {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.modern-border::before,
+.modern-border::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  margin: calc(-1 * var(--border-width));
+  border-radius: calc(var(--border-width) + var(--border-radius));
+  visibility: visible;
+  pointer-events: none;
+}
+
+.modern-border::before {
+  background: linear-gradient(
+    -50deg,
+    rgb(0, 0, 0, 0.3),
+    50%,
+    rgb(0, 0, 0, 0.3),
+    75%,
+    rgb(255, 255, 255, 0.4)
+  );
+}
+
+.modern-border::after {
+  background: linear-gradient(
+    130deg,
+    rgb(0, 0, 0, 0.3),
+    50%,
+    rgb(0, 0, 0, 0.3),
+    75%,
+    rgb(255, 255, 255, 0.4)
+  );
+}
+
+.gradient_01,
+.gradient_02,
+.gradient_03 {
+  position: absolute;
+  width: 50%;
+  background-color: white;
+}
+
+.gradient_01 {
+  height: 10%;
+  top: 70%;
+  filter: blur(100px);
+  opacity: 0.3;
+  right: -5%;
+}
+
+.gradient_02,
+.gradient_03 {
+  border-radius: 20rem;
+  height: 70%;
+  filter: blur(140px);
+  top: 20%;
+  opacity: 0.05;
+}
+
+.gradient_02 {
+  left: -5%;
+}
+
+.gradient_03 {
+  right: 0;
+}
+
+.hero_gradient {
+  background-image: linear-gradient(
+      to top,
+      rgb(7, 12, 14),
+      rgba(0, 0, 0, 0) 60%
+    ),
+    url("/src/assets/tilted_grid.png");
+}
+.hero-border-gradient {
+  border-bottom-width: 2px;
+  border-top-width: 2px;
+  border-image-source: linear-gradient(to right, #ffffff4d, #070c0e);
+  border-image-slice: 1;
+}
+
+.trustedPlatform-gradient {
+  background: radial-gradient(
+      circle at 16rem,
+      rgba(7, 12, 14, 0) 0%,
+      rgba(7, 12, 14, 0) 0%,
+      rgb(7, 12, 14) 39%
+    ),
+    url("/src/assets/grid.png") center/cover;
+}
+
+.whatsNew-gradient {
+  background: radial-gradient(
+      circle at 63rem,
+      rgba(7, 12, 14, 0) 0%,
+      rgba(7, 12, 14, 0) 0%,
+      rgb(7, 12, 14) 39%
+    ),
+    url("/src/assets/grid.png") right/cover;
+}
+
+/* -------------------------- */
